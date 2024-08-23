@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Header Section */
+.main-header {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: url('Images\Food header.jpeg.jpg') no-repeat center center;
+    background-size: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Parallax Effect */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header::after {
+    content: "";
+    background: url('Images\caffe food.jpeg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+/* Author Section */
+.author-section {
+    background: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.author-info img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.author-info p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Beverage List Section */
+.beverage-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.beverage-item {
+    flex: 1 1 calc(33% - 40px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.beverage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.beverage-item h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.beverage-item p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.beverage-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* New Beverage Item Styling */
+/* The new item will automatically follow the styles under .beverage-item */
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* CSS Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
